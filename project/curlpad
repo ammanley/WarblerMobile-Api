@@ -1,0 +1,26 @@
+
+GET
+curl http://localhost:3001/api/users -X GET -H "authorization: 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTB9.nSTSRkLf2I9jV61pdl-Lpxe6tsfZanvHkVSXRPgxhsg"  -H "Content-Type: application/json"
+
+POST-signup
+curl http://localhost:3001/api/users -d '{"username": "Ellie", "password":"pass", "image_url":"no image","email":"awesome@rithmschool.com"}' -H 'authorization: put a JWT token here' -H "Content-Type: application/json"
+
+POST-login
+curl http://localhost:3001/api/users/auth -d '{"username": "Darth Vader", "password":"pass"}' -H "Content-Type: application/json"
+
+GET USER
+curl http://localhost:3001/api/users/10 -X GET -H "authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTB9.nSTSRkLf2I9jV61pdl-Lpxe6tsfZanvHkVSXRPgxhsg" -H "Content-Type: application/json"
+
+POST - edit
+curl http://localhost:3001/api/users/10 -d '{"email":"vader@deathstar.com", "image_url":"scary sith lord image"}' -H "Content-Type: application/json" -H "authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTB9.nSTSRkLf2I9jV61pdl-Lpxe6tsfZanvHkVSXRPgxhsg"
+
+PATCH - edit
+curl http://localhost:3001/api/users/10 -d '{"email":"vader@deathstar.com", "image_url":"scary sith lord image"}' -H "Content-Type: application/json" -H "authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTB9.nSTSRkLf2I9jV61pdl-Lpxe6tsfZanvHkVSXRPgxhsg"
+
+POST - add new msg for user 
+curl http://localhost:3001/api/users/10/messages -d '{"text":"I am text msg Vader is"}' -H "Content-Type: application/json" -H "authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTB9.nSTSRkLf2I9jV61pdl-Lpxe6tsfZanvHkVSXRPgxhsg" 
+
+
+ curl http://localhost:3001/api/users/10/messages -d '{"text":"Yet another Sith Lord msg..."}' -H "Content-Type: application/json" -H "authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTB9.nSTSRkLf2I9jV61pdl-Lpxe6tsfZanvHkVSXRPgxhsg" 
+
+
